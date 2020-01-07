@@ -1,0 +1,17 @@
+function fiboEvenSum(n) {
+  // You can do it!
+  return fibonacci(n).filter((el)=>el%2===0).
+  reduce((el,acc) => el+acc);
+}
+
+//devuelve los primeros n números de la serie
+function fibonacci(n){
+  let arr = [1,2]
+
+  for(let i=0; i<n-2 ; i++){
+    arr.push(arr[arr.length-1] + arr[arr.length-2])
+  }
+  return arr;
+}
+
+console.log( fiboEvenSum(10) )

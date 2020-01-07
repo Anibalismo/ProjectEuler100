@@ -1,0 +1,7 @@
+function multiplesOf3and5(number) {
+    return [...Array(number).keys()].
+    filter((el)=>el%3===0||el%5===0).
+    reduce((el,acc)=> el+acc) ;
+}
+
+console.log(multiplesOf3and5(1000));
